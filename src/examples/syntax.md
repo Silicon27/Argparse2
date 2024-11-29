@@ -1,10 +1,10 @@
 ## Syntax
 
-AdvancedArgs has some extra syntax separate from the traditional argparse syntax.
+Argparse2 has some extra syntax separate from the traditional argparse syntax.
 
 Given the following flag definition:
 ```python
-from advanced_args import Parser
+from argparse2 import Parser
 
 myparser = Parser()
 myparser.add_argument('--help', '-h', description="Prints the help message", nhelp="Prints the help message")
@@ -20,7 +20,7 @@ The added `.d` at the end of the flag will print the description of the flag.
 
 You can also use the `target` argument to specify a target function for the flag to run when it is called.
 ```python
-from advanced_args import Parser
+from argparse2 import Parser
 myparser = Parser()
 myparser.add_argument('--callingtarget', '-c', description="Prints the help message", nhelp="Prints the help message", target=lambda: print("Hello World!"))
 ```
@@ -33,7 +33,7 @@ Only keyword arguments are allowed in the calling of the target function with cu
 
 If you don't wish to have target arguments, or your target function does not take keyword arguments, you can use the `only_value` argument to specify that the target function should only take the value specified in the keyword arguments in the `.add_argument()` function.
 ```python
-from advanced_args import Parser
+from argparse2 import Parser
 
 def myfunc(value):
     print(value)
