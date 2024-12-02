@@ -31,7 +31,7 @@ python3 arg.py --callingtarget
 ```
 Only keyword arguments are allowed in the calling of the target function with custom arguments.
 
-If you don't wish to have target arguments, or your target function does not take keyword arguments, you can use the `only_value` argument to specify that the target function should only take the value specified in the keyword arguments in the `.add_argument()` function.
+If you don't wish to have keyword arguments, or your target function does not take keyword arguments, you can use the `only_value` argument to specify that the target function should only take the values specified in the keyword arguments in the `.add_argument()` function.
 ```python
 from argparse2 import Parser
 

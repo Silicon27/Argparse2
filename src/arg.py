@@ -77,19 +77,21 @@ class Parser:
         print(f"Error: Unrecognised Arguments: '{arg_string}'")
 
 
-def example(*args, **kwargs):
-    print(f"args: {args}, kwargs: {kwargs}")
-
-def example2(arg1, arg2):
-    print(f"arg1: {arg1}, arg2: {arg2}")
-
-myparser = Parser()
-myparser.add_argument('--example', '-e', description="Prints the help message",
-                      nhelp="Prints the help message", target=example, only_value=True,
-                      arg1="This is the help message", arg2="This is an extra message")
-myparser.add_argument('--example2', '-e2', description="Prints the help message",
-                      nhelp="Prints the help message", target=example2,
-                      arg1="This is the help message", arg2="This is an extra message")
-myparser.run()
+# def example(*args, **kwargs):
+#     print(f"args: {args}, kwargs: {kwargs}")
+#
+# def example2(arg1, arg2):
+#     print(f"arg1: {arg1}, arg2: {arg2}")
+#
+# myparser = Parser()
+# myparser.add_argument('--example', '-e', description="Prints the help message",
+#                       nhelp="Prints the help message", target=example, only_value=True,
+#                       arg1="This is the help message", arg2="This is an extra message")
+# myparser.add_argument('--example2', '-e2', description="Prints the help message",
+#                       nhelp="Prints the help message", target=example2,
+#                       arg1="This is the help message", arg2="This is an extra message")
+#
+# if __name__ == "__main__":
+#     myparser.run()
 
 
